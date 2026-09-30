@@ -4,7 +4,8 @@ description: this will build and maven test java app
 inputs:
   WORKING_DIR:
     description: working dir of micro service
-    required: true
+    required: false
+    default: "."
   JAVA_VERSION:
     description: version of java to be used
     default: "21"
