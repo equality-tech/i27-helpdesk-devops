@@ -47,5 +47,5 @@ runs:
       uses: actions/upload-artifact@v7
       with:
         name: ${{inputs.WORKING_DIR}}
-        path: ./${{inputs.WORKING_DIR}}/target/surefire-reports
+        path: ${{inputs.WORKING_DIR}}/target/surefire-reports
         retention-days: ${{inputs.RETENTION_DAYS}}
