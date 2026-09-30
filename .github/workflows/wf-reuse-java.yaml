@@ -19,7 +19,7 @@ jobs:
 
       - id: java-maven-test
         name: java maven test
-        uses: ./.github/actions/java-maven-test
+        uses: equality-tech/i27-helpdesk-devops/.github/actions/java-maven-test@main
         with:
           WORKING_DIR: ${{inputs.WORKING_DIR}}
 
@@ -34,7 +34,7 @@ jobs:
 
       - name: docker push image
         id: docker-push-image
-        uses: ./.github/actions/docker-build-push
+        uses: equality-tech/i27-helpdesk-devops/.github/actions/docker-build-push@main
         with:
           IMAGE_NAME: ${{inputs.DOCKER_IMAGE_NAME}}
           WORKING_DIR: ${{inputs.WORKING_DIR}}
