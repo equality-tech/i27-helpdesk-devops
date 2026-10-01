@@ -14,10 +14,12 @@ on:
         required: true
       NEXT_PUBLIC_API_BASE_URL:
         type: string
-        required: true
+        required: false
+        default: ""
       NEXT_PUBLIC_API_KEY:
         type: string
-        required: true  
+        required: false
+        default: ""
     secrets:
       DOCKERHUB_TOKEN:
         required: true
