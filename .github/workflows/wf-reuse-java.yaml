@@ -12,6 +12,9 @@ on:
       DOCKERHUB_USERNAME:
         type: string
         required: true
+      environment:
+        type: string
+        required: true            
     secrets:
       DOCKERHUB_TOKEN:
         required: true
@@ -20,6 +23,7 @@ jobs:
   maven-test-app:
     runs-on: ubuntu-latest
     name: java maven test
+    environment: ${{inputs.environment}}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -33,6 +37,7 @@ jobs:
   docker-build-package-push-job:
     name: docker build and push
     runs-on: ubuntu-latest
+    environment: ${{inputs.environment}}
     needs: maven-test-app
 
     steps:

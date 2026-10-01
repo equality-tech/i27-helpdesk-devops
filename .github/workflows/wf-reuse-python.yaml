@@ -12,14 +12,19 @@ on:
       DOCKERHUB_USERNAME:
         type: string
         required: true
+      environment:
+        type: string
+        required: true        
     secrets:
       DOCKERHUB_TOKEN:
         required: true
 
+    
 
 jobs:
   python-test-app:
     runs-on: ubuntu-latest
+    environment: ${{inputs.environment}}
     name: python app testing
     steps:
       - name: Checkout repository
@@ -34,6 +39,7 @@ jobs:
   docker-build-package-push-job:
     name: docker build, package and push
     runs-on: ubuntu-latest
+    environment: ${{inputs.environment}}
     needs: python-test-app
 
     steps:

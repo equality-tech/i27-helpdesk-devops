@@ -20,6 +20,9 @@ on:
         type: string
         required: false
         default: ""
+      environment:
+        type: string
+        required: true            
     secrets:
       DOCKERHUB_TOKEN:
         required: true
@@ -27,6 +30,7 @@ on:
 jobs:
   node-test-app:
     runs-on: ubuntu-latest
+    environment: ${{inputs.environment}}
     name: node test
     steps:
       - name: Checkout repository
@@ -40,6 +44,7 @@ jobs:
 
   docker-build-package-push-job:
     name: docker build, package and push
+    environment: ${{inputs.environment}}
     runs-on: ubuntu-latest
     needs: node-test-app
 
