@@ -7,7 +7,8 @@ inputs:
     required: true
   WORKING_DIR:
     description: working dir of micro service
-    required: true
+    required: false
+    default: "."
   ADDITIONAL_ARGS:
     description: additional args for builing the image
     required: false

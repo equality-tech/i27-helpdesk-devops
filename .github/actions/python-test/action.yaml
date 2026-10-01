@@ -4,7 +4,8 @@ description: this will test python app
 inputs:
   WORKING_DIR:
     description: working dir of micro service
-    required: true
+    required: false
+    default: "."
   PYTHON_VERSION:
     description: version of python to be used
     default: "3.13"

@@ -4,7 +4,8 @@ description: this will test node app
 inputs:
   WORKING_DIR:
     description: working dir of micro service
-    required: true
+    required: false
+    default: "."
   NODE_VERSION:
     description: version of node to be used
     default: "22"
