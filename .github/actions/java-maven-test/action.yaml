@@ -22,7 +22,10 @@ inputs:
     required: false
     default: 3
     description: retention days for artifacts
-
+  environment:
+    type: string
+    required: true  
+    
 runs:
   using: composite
 

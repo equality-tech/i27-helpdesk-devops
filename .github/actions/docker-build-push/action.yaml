@@ -19,7 +19,10 @@ inputs:
   DOCKERHUB_TOKEN:
     description: docker access token to login
     required: true
-
+  environment:
+    type: string
+    required: true  
+    
 outputs:
   IMAGE:
     description: final image name

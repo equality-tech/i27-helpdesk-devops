@@ -10,7 +10,10 @@ inputs:
     description: version of python to be used
     default: "3.13"
     required: false
-
+  environment:
+    type: string
+    required: true
+    
 runs:
   using: composite
 

@@ -10,6 +10,10 @@ inputs:
     description: version of node to be used
     default: "22"
     required: false
+  environment:
+    type: string
+    required: true
+
 
 runs:
   using: composite
